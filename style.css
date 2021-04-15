@@ -49,6 +49,7 @@ padding: 25px;
 }
 .input{
   display: inline-block;
+  text-transform: capitalize;
   background: var(--fondo);
   border:none;
   max-width: 50%;
@@ -123,6 +124,7 @@ button:hover{
   padding: 50px;
   box-shadow: 2px 2px 2px var(--btn_);
 
+
 }
 .card_title{
   padding: 10px;
@@ -181,4 +183,51 @@ button:hover{
 .temp_info> span{
     margin: 5px;
    
+}
+
+.modal{
+  position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    filter: opacity(90%);
+    background: rgb(0,0,.5);
+}
+
+.modal_container{
+    border-radius: 5px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid var(--btn_);
+    width: 270px;
+    height: 130px;
+}
+.modal_body{
+ display: block;
+ max-width: 100%;
+ font-size: medium;
+    color:white;
+    margin-left: 6%;
+    padding: 12px;
+}
+
+
+.modal_dispose{
+    display: block;
+    width: 100%;
+    height: 25px;
+    background: var(--btn_);
+}
+
+.modal_exit{
+    cursor: pointer;
+    color:var(--color4);
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
 }
