@@ -1,9 +1,12 @@
 
-let search=document.getElementById('search').value;
+let search=document.getElementById('search');
 
 window.addEventListener("load", function () {
-     search.value = "";
+     // .modal
+     document.querySelector('.modal').style.display="flex";
+     search.value= "";
 });
+
 
 
 const btn=document.querySelector('.btn');
@@ -13,24 +16,19 @@ btn.addEventListener("click",function() {
              create_card(data.name,data.sys.country,data.main.temp,data.weather[0]["description"],
               data.weather[0]["icon"],data.main.humidity,Math.round(data.main.temp_max),Math.round(data.main.temp_min));
 
-//           document.getElementById("card__").style.transform="translate(10px)";
-//           const card = document.querySelector(".card");
-// if (!!card) {
-//   console.log("card esta creado")
-// }else{
-//   console.log("car no esta creado");
-// }
         search.value = "";
+
         }).catch(error => console.log(error)); 
 
 });
 
 function getJson(){
-   return 'https://api.openweathermap.org/data/2.5/weather?q='+search+'&appid=4d8fb5b93d4af21d66a2948710284366&units=metric';
+   return 'https://api.openweathermap.org/data/2.5/weather?q='+search.value+'&appid=4d8fb5b93d4af21d66a2948710284366&units=metric';
 }
 
 function create_card(name,country,temp,description,icon,humdad,temp_max,temp_min){
-document.getElementById("card__").innerHTML = `
+
+ document.getElementById("card__").innerHTML = `
 <div class="card" >
       <div class="card_title">
         <p>${name}</p> <span>${country}</span>
@@ -50,8 +48,8 @@ document.getElementById("card__").innerHTML = `
       </div>
     </div>
   </div>
-`;
-document.getElementById("card__").parentNode;
+` ;
+
 }
 
 
@@ -78,6 +76,11 @@ function traductor_info(description){
 
 }
 
+function exit_modal() {
+
+        document.querySelector(".modal").style = "display: none;";
+    
+}
 
 //         <i class="fas fa-cloud-sun" ></i>
 // https://fontawesome.com/icons?d=gallery&p=2&q=%20clouds
