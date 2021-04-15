@@ -194,7 +194,7 @@ button:hover{
     max-height: 100vh;
     z-index: 1;
     filter: opacity(90%);
-    background: var(--card);
+    background: #020b21;
 }
 
 .modal_container{
