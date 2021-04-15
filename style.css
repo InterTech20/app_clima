@@ -194,7 +194,7 @@ button:hover{
     max-height: 100vh;
     z-index: 1;
     filter: opacity(90%);
-    background: #020b21;
+    background: #01081a;
 }
 
 .modal_container{
@@ -208,9 +208,9 @@ button:hover{
     height: 130px;
 }
 .modal_body{
- display: block;
- max-width: 100%;
- font-size: medium;
+   display: block;
+   max-width: 100%;
+   font-size: medium;
     color:white;
     margin-left: 6%;
     padding: 12px;
