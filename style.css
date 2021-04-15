@@ -12,9 +12,12 @@
 }
 
 body{ 
- background-color: var(--fondo);
- font-family: sans-serif;
- color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--fondo);
+  font-family: sans-serif;
+  color: white;
 }
 
 .container{
@@ -22,9 +25,16 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 25px;
+  margin: 70px; 
+  padding: 50px;
   border: 5px solid var(--card);
   border-radius: 25px;
+}
+.item_header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   align-items: center;
 }
 .item_header h1{
   display: block;
@@ -32,7 +42,10 @@ body{
   font-size:  45px;
 }
 .from{
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+padding: 25px;
 }
 .input{
   display: inline-block;
@@ -42,7 +55,7 @@ body{
   max-height: 50%;
   border-bottom: 2px solid white;
   color:white;
-
+  margin-right: 15px;
   text-align: center;
   font-size: 25px;
   outline: none;
@@ -97,17 +110,22 @@ button:hover{
 }
 
 .card{
+
   display: flex;
   flex-direction: column;
   align-items: center;
   background: var(--card);
-  width: 277px;
-  height: 365px;
+  /*width: 277px;
+  height: 365px;*/
+  max-width: 100%;
   border-radius: 25px;
   margin: 10px;
+  padding: 50px;
+  box-shadow: 2px 2px 2px var(--btn_);
+
 }
 .card_title{
-  padding: 25px;
+  padding: 10px;
   display: block;
 }
 .card_title>p{
@@ -115,7 +133,7 @@ button:hover{
   font-size: 50px;
 }
 .card_title>span{
-    display: inline-block;
+   display: inline-block;
    font-size: 10px;
    background: var(--btn_);
    padding: 8px;
@@ -130,20 +148,37 @@ button:hover{
 }
 .card_time>span{
   display: inline-block;
-   font-size: 18px;
+   font-size: 40px;
 }
 .icon{
-  padding-top: 20px;
+
  display: block; 
 }
-.icon > i{
+.icon > .temp-icon{
  display: block;
-font-size: 50px;
-text-align: center;
-padding-bottom: 10px;
+ max-width: 50%;
+ margin-left: 25%;
+ filter: invert(100%);
+
 
 }
 .icon > span{
+  text-align: center;
  display: block;
  font-size: 22px;
+
+}
+.temp_info{
+    display: block;
+    padding: 10px;
+}
+
+.temp_info> span >i{
+   padding: 5px;
+   
+}
+
+.temp_info> span{
+    margin: 5px;
+   
 }
