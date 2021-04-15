@@ -12,7 +12,7 @@ btn.addEventListener("click",function() {
    fetch(getJson()).then(response => response.json())
          .then(data => {
              create_card(data.name,data.sys.country,data.main.temp,data.weather[0]["description"]);
-            search.value = "";
+   
         }).catch(error => console.log(error)); 
 
 });
