@@ -23,7 +23,7 @@ btn.addEventListener("click",function() {
 });
 
 function getJson(){
-   return 'https://api.openweathermap.org/data/2.5/weather?q='+search.value+'&appid=4d8fb5b93d4af21d66a2948710284366&units=metric';
+    return 'https://api.openweathermap.org/data/2.5/weather?q='+search+'&appid=4d8fb5b93d4af21d66a2948710284366&units=metric&lang=es';
 }
 
 function create_card(name,country,temp,description,icon,humdad,temp_max,temp_min){
@@ -36,8 +36,8 @@ function create_card(name,country,temp,description,icon,humdad,temp_max,temp_min
       <div class="card_time" title="Tempratura ${Math.round(temp)}°C"><p>${Math.round(temp)}</p> <span>°C</span></div>
       <div class="icon">
   
-<img class="temp-icon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${icon}.svg" title="${traductor_info(description)}" alt="${traductor_info(description)}">
-        <span>${traductor_info(description)}</span>
+<img class="temp-icon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${icon}.svg" title="${description}" alt="${description}">
+        <span>${description}</span>
         
         <div class="temp_info">
 <span title="Humedad"><i class="fas fa-tint"></i>${humdad}</span>
@@ -52,29 +52,6 @@ function create_card(name,country,temp,description,icon,humdad,temp_max,temp_min
 
 }
 
-
-function traductor_info(description){
-  if(description=="clear sky"){
- 
-    return "Cielo Limpio";
-  }else if(description=="broken clouds"){
-   
-    return "Nubes Rotas";
-  }else if(description=="scattered clouds"){
-   
-    return "Nubes Dispersas";
-  }else if(description=="light snow"){
-  
-    return "Nieve Ligera";
-  }else if(description=="overcast clouds"){
-
-    return "Nubes Nubladas";
-  }else if(description=="light rain"){
-
-    return "Lluvia Ligera";
-  }
-
-}
 
 function exit_modal() {
 
