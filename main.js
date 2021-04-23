@@ -26,7 +26,7 @@ btn.addEventListener("click",function() {
 });
 
 function getJson(){
-   return 'https://api.openweathermap.org/data/2.5/weather?q='+search+'&appid=4d8fb5b93d4af21d66a2948710284366&units=metric';
+   return 'https://api.openweathermap.org/data/2.5/weather?q='+search+'&appid=4d8fb5b93d4af21d66a2948710284366&units=metric&lang=es';
 }
 
 function create_card(name,country,temp,description,icon,humdad,temp_max,temp_min){
@@ -56,7 +56,7 @@ document.getElementById("card__").parentNode;
 
 
 function traductor_info(description){
-  if(description=="clear sky"){
+  /*if(description=="clear sky"){
  
     return "Cielo Limpio";
   }else if(description=="broken clouds"){
@@ -74,8 +74,8 @@ function traductor_info(description){
   }else if(description=="light rain"){
 
     return "Lluvia Ligera";
-  }
-
+  }*/
+ return description;
 }
 
 
