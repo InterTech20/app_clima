@@ -23,7 +23,7 @@ btn.addEventListener("click",function() {
 });
 
 function getJson(){
-    return 'https://api.openweathermap.org/data/2.5/weather?q='+search+'&appid=4d8fb5b93d4af21d66a2948710284366&units=metric&lang=es';
+    return 'https://api.openweathermap.org/data/2.5/weather?q='+search+'&appid=f8ec163645e180f634459ba5aaadf9dd&units=metric&lang=es';
 }
 
 function create_card(name,country,temp,description,icon,humdad,temp_max,temp_min){
