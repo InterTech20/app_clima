@@ -1,3 +1,9 @@
+/*
+ Página desarrollada  por Jhonathan O'brian Saavedra web's, subida y alojada en github para que los desarrolladores puedan ver el codigo y usarlo para test. 
+En Inter Tech ayudamos los jóvenes que van empezando. Siguenos en Facebook: https://www.facebook.com/InteraccionTecnologica y 
+github como:https://github.com/intertech20/ 
+*/
+
 :root{
  --fondo : #081536; 
  --btn_:#5a1bed;
@@ -18,6 +24,7 @@ body{
   background-color: var(--fondo);
   font-family: sans-serif;
   color: white;
+  height: 100vh;
 }
 
 .container{
@@ -45,20 +52,31 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-padding: 25px;
+  padding: 25px;
+}
+.from_input{
+  display: inline-block;
+  width: 50%;
+  height: 50%; 
+  margin-right: 15px;
 }
 .input{
-  display: inline-block;
+  display: block;
+  text-transform: capitalize;
   background: var(--fondo);
   border:none;
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 100%;
+  max-height: 100%; 
   border-bottom: 2px solid white;
   color:white;
-  margin-right: 15px;
+  /* margin-right: 15px; */
   text-align: center;
   font-size: 25px;
   outline: none;
+}
+.menssage{
+  display: block;
+  padding: 6px;
 }
 button{
     display: inline-block;
@@ -74,6 +92,7 @@ button{
     font-weight: 400;
     outline: none;
 }
+
 button:hover{
     animation: btn_anime 1.2s ease-in-out;
     transition: 2s all ease-in-out;
@@ -99,6 +118,7 @@ button:hover{
         
     }
 }
+
 .item_body{
   display: flex;
   flex-wrap: nowrap;
@@ -122,6 +142,7 @@ button:hover{
   margin: 10px;
   padding: 50px;
   box-shadow: 2px 2px 2px var(--btn_);
+  cursor: pointer;
 
 }
 .card_title{
@@ -157,7 +178,7 @@ button:hover{
 .icon > .temp-icon{
  display: block;
  max-width: 50%;
- margin-left: 25%;
+ margin-left: 30%;
  filter: invert(100%);
 
 
@@ -180,5 +201,96 @@ button:hover{
 
 .temp_info> span{
     margin: 5px;
-   
+    margin-left: 12%;
 }
+.date_pronostico{
+  padding: 10px;
+
+}
+.date_pronostico_title{
+  font-size: 20px;
+  margin-left: 12%;
+}
+.date_pronostico_1,.date_pronostico_2,
+.date_pronostico_3,.date_pronostico_4,
+.date_pronostico_5{
+  display: block;
+  margin: 10px;
+}
+.text_clima_item_left{
+  text-transform: capitalize;
+  float: left;
+}
+.text_clima_item_right{
+  margin-left: 10px;
+  float: right;
+
+}
+
+.modal{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; 
+    filter: opacity(98%);
+    background: #030c24;
+    z-index: 1;
+
+}
+
+ .modal_container{
+    border-radius: 5px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    border: 2px solid var(--btn_);
+    width: 270px;
+    height: 180px;
+}
+.modal_body{
+   display: block;
+   max-width: 100%;
+   font-size: medium;
+   color:white;
+   margin: 6%;
+   padding: 6px; 
+}
+.fa-exclamation-triangle {
+  display: block;
+  font-size: 30px;
+  margin-left: 45%;
+  
+}
+.modal_body>span{
+  display: block;
+  padding: 3px;
+  margin-top: 2%;
+  text-align: justify;
+}
+.modal_dispose{
+    display: block;
+    width: 100%;
+    height: 25px;
+    background: var(--btn_);
+}
+
+.modal_exit{
+    cursor: pointer;
+    color:var(--color4);
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+ @media (max-width:992px) {
+  .modal{
+    min-width: 100%;
+    height: 100vh; 
+    
+
+}
+ }
