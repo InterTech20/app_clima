@@ -87,7 +87,7 @@ function date_pronostico(data) {
   Math.round(data.list[31].main.temp_max),
   Math.round(data.list[31].main.temp_min));
   //---------------------------------------- 
-  hour_pronostico(data);
+//  hour_pronostico(data);
 }
 
 function date_pronostico_function (number,data_1,data_2,data_3){
