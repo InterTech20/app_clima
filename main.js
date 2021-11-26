@@ -57,7 +57,7 @@ function getJson(){
 function pronostico_5_days(params) {
   fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${params}&appid=87e4f01705095dec0164761d3cb63252&units=metric&lang=es`).then(response => response.json())
    .then(data => {
-   date_pronostico(data);
+   //date_pronostico(data);
 }).catch(error => console.log(error)); 
 }
 
