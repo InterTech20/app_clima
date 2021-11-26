@@ -57,38 +57,11 @@ function getJson(){
 function pronostico_5_days(params) {
   fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${params}&appid=87e4f01705095dec0164761d3cb63252&units=metric&lang=es`).then(response => response.json())
    .then(data => {
-   //date_pronostico(data);
+   
 }).catch(error => console.log(error)); 
 }
 
-/* ==============================================
-            PINTAR LOS VALORES EN HTML
- ==============================================*/
 
-function date_pronostico(data) {
-  //---------------------------------------- 
-  date_pronostico_function (1,(data.list[2].dt_txt).slice(0, 10),
-  Math.round(data.list[2].main.temp_max),
-  Math.round(data.list[2].main.temp_min));
-  //----------------------------------------
-  date_pronostico_function (2,(data.list[9].dt_txt).slice(0, 10),
-  Math.round(data.list[9].main.temp_max),
-  Math.round(data.list[9].main.temp_min));
- //----------------------------------------
-  date_pronostico_function (3,(data.list[19].dt_txt).slice(0, 10),
-  Math.round(data.list[19].main.temp_max),
-  Math.round(data.list[19].main.temp_min));
-  //----------------------------------------
-  date_pronostico_function (4,(data.list[24].dt_txt).slice(0, 10),
-  Math.round(data.list[24].main.temp_max),
-  Math.round(data.list[24].main.temp_min));
-  //----------------------------------------
-  date_pronostico_function (5,(data.list[31].dt_txt).slice(0, 10),
-  Math.round(data.list[31].main.temp_max),
-  Math.round(data.list[31].main.temp_min));
-  //---------------------------------------- 
-//  hour_pronostico(data);
-}
 
 function date_pronostico_function (number,data_1,data_2,data_3){
 document.querySelector(".date_pronostico_"+number).innerHTML=`
@@ -120,15 +93,7 @@ function create_card(name,country,temp,description,icon,humdad,temp_max,temp_min
 <span title="Tempratura Maxima"><i title="Tempratura Maxima" class="fas fa-thermometer-three-quarters"></i>${temp_max}</span>
    <div/>
 
-   <div class="date_pronostico"><br>
-   <span class="date_pronostico_title">Pronostico de 5 Dias</span><br>
-   <div class="date_pronostico_1"></div><br>
-    <div class="date_pronostico_2"></div><br>
-    <div class="date_pronostico_3"></div><br>
-    <div class="date_pronostico_4"></div><br>
-    <div class="date_pronostico_5"></div></div>
-
- </div>
+  
 </div>
 </div>
 ` ;
